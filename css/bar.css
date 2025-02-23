@@ -541,7 +541,7 @@ ul.skills li.more input:checked + label:hover {
 /*** Mobile view disabled to get (almost) the desired thumbnail ***/
 /*** Uncomment below code to add the media query for mobile view ***/
 
-/*
+
 @media only screen and (max-width: 768px) {
 	.content { height: 60vh; }
 	.profile-skills {
@@ -578,4 +578,144 @@ ul.skills li.more input:checked + label:hover {
 		background: var(--c1);
 	}
 }
-*/
+
+
+@media (max-width: 768px) {
+	/* Adjust the root variables for smaller screens */
+	:root {
+		--c1: #7fc0ca;
+		--b2: #222;
+		--b3: #333;
+		--w1: #fff;
+		--w2: #eee;
+		--t1: all 0.5s ease 0s;
+	}
+
+	/* Make the .barre container responsive */
+	.barre {
+		width: 100%;
+		height: auto;
+		padding-bottom: 100px; /* Reduced padding for mobile */
+		font-size: 14px; /* Smaller font size for mobile */
+		background-color: #00204a;
+	}
+
+	.content {
+		width: 90vw; /* Reduced width for mobile */
+		height: auto; /* Height adjusted */
+		padding: 15px; /* Add some padding for better spacing */
+	}
+
+	.profile-skills {
+		flex-direction: column; /* Stack the skills vertically on mobile */
+		top: 50px; /* Adjusted positioning */
+		align-items: center;
+		padding: 10%;
+		padding-left: 5%;
+		padding-top: 20%;
+
+	}
+
+	.profile-skills > div {
+		width: 80%; /* Reduce width for mobile */
+		margin-right: 0; /* No right margin */
+		margin-bottom: 15px; /* Add margin between skills */
+	}
+
+	ul.skills, ul.skills2, ul.skills3 {
+		padding: 15px;
+		background: linear-gradient(0deg, var(--c1) 0 10px, var(--b2) 0 calc(100% - 10px), var(--c1) 0 100%);
+	}
+
+	ul.skills li {
+		font-size: 14px; /* Reduced font size for mobile */
+	}
+
+	ul.skills li span:after {
+		font-size: 12px; /* Reduced font size for mobile */
+	}
+
+	.profile-skills input {
+		width: 35px; /* Smaller width for input checkboxes */
+		height: 35px; /* Smaller height */
+	}
+
+	/* Adjust label size */
+	.profile-skills label {
+		width: 45px; /* Adjust size */
+		height: 45px;
+	}
+
+	.profile-skills label:before {
+		width: 25px;
+		height: 15px;
+	}
+
+	ul.skills li.more div {
+		padding: 10px; /* Reduced padding */
+	}
+
+	/* Bottom labels for mobile */
+	ul.skills li.more label {
+		width: 45px;
+		height: 45px;
+	}
+
+	/* Make skill hover effects less intense for mobile */
+	ul.skills li:hover {
+		filter: brightness(1.2);
+		transition: var(--t1);
+	}
+
+	ul.skills li span:before {
+		display: none; /* Hide span:before on mobile */
+	}
+
+	ul.skills li span:after {
+		font-size: 12px;
+	}
+
+	/* Specific adjustments for each skill list */
+	ul.skills li.sk-ani, ul.skills li.sk-cms, ul.skills li.sk-dis, ul.skills li.sk-dtb, ul.skills li.sk-pro, ul.skills li.sk-res,
+	ul.skills li.sk-gim, ul.skills li.sk-ado, ul.skills li.sk-not, ul.skills li.sk-tri, ul.skills li.sk-wor, ul.skills li.sk-tre,
+	ul.skills li.sk-css, ul.skills li.sk-htm, ul.skills li.sk-jav, ul.skills li.sk-php, ul.skills li.sk-sql, ul.skills li.sk-pug {
+		width: 100%; /* Full width for mobile */
+	}
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+	.barre {
+		padding-bottom: 50px; /* Further reduced padding */
+		font-size: 12px; /* Even smaller font size */
+	}
+
+	.content {
+		width: 95vw; /* Full width minus a little margin */
+	}
+
+	.profile-skills {
+		top: 30px; /* Reduced top margin */
+	}
+
+	.profile-skills > div {
+		width: 100%; /* Full width on small screens */
+	}
+
+	ul.skills li {
+		font-size: 13px; /* Reduced font size */
+	}
+
+	ul.skills li span:after {
+		font-size: 10px; /* Smaller value for mobile */
+	}
+
+	ul.skills li:hover {
+		filter: brightness(1.1);
+	}
+
+	h2 {
+		padding-top: 5%;
+		text-align: center;
+	}
+}
